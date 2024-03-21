@@ -1,0 +1,44 @@
+html {
+    font-size: 10px;
+    font-family: "Waiting for the Sunrise", cursive;
+    font-weight: 400;
+    font-style: normal;;
+    background-color: purple;
+}
+
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: greenyellow;
+    padding: 0px 20px 20px 20px;
+    border: 5px solid black;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 60px;
+    color: purple;
+    text-shadow: 3px 3px 1px black;
+}
+
+h2 {
+    color: purple;
+    font-size: 30px;
+}
+p, li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: rebeccapurple;
+}
+
+#my-paragraph {
+    color: red;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
