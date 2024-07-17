@@ -38,9 +38,15 @@ def output(call):
         print(inspect.getsource(call), end="")
     except:
         print(call)
-        
-call = make_pair(identity)(apply)(select_second)
-       
-output(call)
+    
+while True:
+    call = input("λ: ")
+    if call == "exit":
+        exit()
+    else:
+        try:
+            output(eval(call))
+        except:
+            print("Bad input")
 </code></pre>
 </body>
