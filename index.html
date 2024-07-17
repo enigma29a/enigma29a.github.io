@@ -12,46 +12,35 @@
 
 
 
-    <pre><code class="language-python">
+<pre><code class="language-python">
 import inspect
 
 # λx.x
 identity = lambda x: x
-
+    
 # λs.(s s)
 self_apply = lambda x: x(x)
-
+    
 # λfunc.λarg.(func arg)
-# apply = lambda func, arg: func(arg)
-
 apply = lambda func: lambda arg: func(arg)
-
+    
 # λfirst.λsecond.first
-# select_first = lambda first, second: first
-
 select_first = lambda first: lambda second: first
-
+    
 # λfirst.λsecond.second
-# select_second = lambda first, second: second
-
 select_second = lambda first: lambda second: second
-
+    
 # λfirst.λsecond.λfunc.((func first) second)
-# make_pair = lambda first, second, func: func(first, second)
-# make_pair = lambda first, second: lambda func: func(first, second)
-
 make_pair = lambda first: lambda second: lambda func: func(first)(second)
-
+    
 def output(call):
     try:
         print(inspect.getsource(call), end="")
     except:
         print(call)
-
-
-call = make_pair(identity)(apply)(select_first)
-
-
+        
+call = make_pair(identity)(apply)(select_second)
+       
 output(call)
-    </code></pre>
+</code></pre>
 </body>
